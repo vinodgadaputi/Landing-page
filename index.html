@@ -4,26 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Restaurant Landing Page</title>
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="./css/style.css" />
 
   <!-- Font Awesome CDN for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Boxicons CDN for cart icon -->
-  <link
-    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
     <span class="logo">DelishDine</span>
     <span class="nav-toggle" id="nav-toggle">&#9776;</span>
-    <ul>
+    <ul id="nav-menu">
       <li><a href="#banner">Home</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#menu">Menu</a></li>
@@ -83,7 +79,9 @@
   <div class="popup" id="popup">
     <div class="popup-content">
       <button class="close-btn" id="close-popup">&times;</button>
+      <span class="prev" id="prev-img">&#10094;</span>
       <img src="" alt="Popup Image" id="popup-img" />
+      <span class="next" id="next-img">&#10095;</span>
     </div>
   </div>
 
@@ -91,25 +89,10 @@
   <section class="gallery" id="gallery">
     <h2 class="gallery-title">Gallery</h2>
     <div class="images-grid">
-      <img
-        src="./images/chicken fry pack.png"
-        alt="Dish 1"
-        class="popup-img"
-      />
-      <img
-        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
-        alt="Dish 2"
-        class="popup-img"
-      />
-      <img
-        src="./images/chicken burger.jpg"
-        class="popup-img"
-      />
-      <img
-        src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=600&q=80"
-        alt="Dish 4"
-        class="popup-img"
-      />
+      <img src="./images/shawarma.jpg" alt="Dish 1" class="popup-img" />
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Dish 2" class="popup-img" />
+      <img src="./images/chicken burger.jpg" alt="Dish 3" class="popup-img" />
+      <img src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=600&q=80" alt="Dish 4" class="popup-img" />
     </div>
   </section>
 
@@ -169,7 +152,10 @@
       <div class="container">
         <div class="about">
           <h3>About Us</h3>
-          <p>DelishDine offers a gourmet dining experience with fresh ingredients, crafted dishes, and a cozy ambience to make every meal memorable.</p>
+          <p>
+            DelishDine offers a gourmet dining experience with fresh
+            ingredients, crafted dishes, and a cozy ambience to make every meal memorable.
+          </p>
           <ul class="icons">
             <li><a href="#"><i class="fab fa-facebook-f" style="color: #fff;"></i></a></li>
             <li><a href="#"><i class="fab fa-twitter" style="color: #fff;"></i></a></li>
@@ -219,51 +205,11 @@
       </div>
     </div>
   </footer>
+
   <div class="copyright">
     <p>Copyright &copy; 2025 DelishDine | All Rights Reserved</p>
   </div>
 
-  <script>
-    // Responsive Navbar Toggle
-    const navToggle = document.getElementById('nav-toggle');
-    const navbar = document.getElementById('navbar');
-    navToggle.addEventListener('click', () => {
-      navbar.classList.toggle('responsive');
-    });
-
-    // Image Popup Modal
-    const popup = document.getElementById('popup');
-    const popupImg = document.getElementById('popup-img');
-    const closeBtn = document.getElementById('close-popup');
-
-    document.querySelectorAll('.popup-img').forEach(img => {
-      img.addEventListener('click', () => {
-        popup.style.display = 'flex';
-        popupImg.src = img.src;
-        popupImg.alt = img.alt || 'Popup Image';
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      popup.style.display = 'none';
-      popupImg.src = '';
-      popupImg.alt = '';
-    });
-
-    popup.addEventListener('click', e => {
-      if (e.target === popup) {
-        popup.style.display = 'none';
-        popupImg.src = '';
-        popupImg.alt = '';
-      }
-    });
-
-    // Prevent form submission for demo purposes
-    document.querySelector('.contactform form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Thank you for contacting us!');
-      this.reset();
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
