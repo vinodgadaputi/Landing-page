@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant Landing Page</title>
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Boxicons CDN for cart icon -->
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <span class="logo">DelishDine</span>
+    <span class="nav-toggle" id="nav-toggle">&#9776;</span>
+    <ul>
+      <li><a href="#banner">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner -->
+  <section class="banner" id="banner">
+    <div class="banner-content">
+      <h1>Welcome to DelishDine</h1>
+      <p>Delicious food, delightful ambience – taste the difference.</p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <div class="heading">
+      <span>Food Menu</span>
+      <h2>Fresh Taste and Great Price</h2>
+    </div>
+    <div class="menu-container">
+      <div class="box">
+        <div class="box-img">
+          <img src="./images/chicken burger.jpg" alt="Chicken Burger" />
+        </div>
+        <h2>Chicken Burger</h2>
+        <h3>Tasty Food</h3>
+        <span>$11.00</span>
+        <i class='bx bx-cart-alt'></i>
+      </div>
+
+      <div class="box">
+        <div class="box-img">
+          <img src="./images/shawarma.jpg" alt="Shawarma" />
+        </div>
+        <h2>Shawarma</h2>
+        <h3>Tasty Food</h3>
+        <span>$11.00</span>
+        <i class='bx bx-cart-alt'></i>
+      </div>
+
+      <div class="box">
+        <div class="box-img">
+          <img src="./images/chicken fry pack.png" alt="Chicken Fry Pack" />
+        </div>
+        <h2>Chicken Fry Pack</h2>
+        <h3>Tasty Food</h3>
+        <span>$11.00</span>
+        <i class='bx bx-cart-alt'></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Popup Modal -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <button class="close-btn" id="close-popup">&times;</button>
+      <img src="" alt="Popup Image" id="popup-img" />
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <h2 class="gallery-title">Gallery</h2>
+    <div class="images-grid">
+      <img
+        src="./images/chicken fry pack.png"
+        alt="Dish 1"
+        class="popup-img"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+        alt="Dish 2"
+        class="popup-img"
+      />
+      <img
+        src="./images/chicken burger.jpg"
+        class="popup-img"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=600&q=80"
+        alt="Dish 4"
+        class="popup-img"
+      />
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <div class="contact" id="contact">
+    <div class="content">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Reach out for reservations, catering, or any questions about our menu and services.</p>
+    </div>
+    <div class="container">
+      <div class="contactinfo">
+        <div class="box">
+          <div class="icon"><i class="fa-sharp fa-solid fa-location-dot"></i></div>
+          <div class="text">
+            <h3>Address</h3>
+            <p>123 Gourmet Lane, <br />Foodie District, <br />Flavor Town, TX 75001</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+          <div class="text">
+            <h3>Email</h3>
+            <p>contact@delishdine.com</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="text">
+            <h3>Phone</h3>
+            <p>+1 234 567 8900</p>
+          </div>
+        </div>
+      </div>
+      <div class="contactform">
+        <form action="#">
+          <h2>Send Message</h2>
+          <div class="inputbox">
+            <input type="text" placeholder="Full Name" required />
+          </div>
+          <div class="inputbox">
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="inputbox">
+            <textarea required placeholder="Type your message..."></textarea>
+          </div>
+          <div class="inputbox">
+            <input type="submit" value="Send" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <div class="container">
+        <div class="about">
+          <h3>About Us</h3>
+          <p>DelishDine offers a gourmet dining experience with fresh ingredients, crafted dishes, and a cozy ambience to make every meal memorable.</p>
+          <ul class="icons">
+            <li><a href="#"><i class="fab fa-facebook-f" style="color: #fff;"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter" style="color: #fff;"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram" style="color: #fff;"></i></a></li>
+            <li><a href="#"><i class="fab fa-whatsapp" style="color: #fff;"></i></a></li>
+          </ul>
+        </div>
+        <div class="quicklinks">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#gallery">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Reservation</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="quicklinks">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="#">Dine-in</a></li>
+            <li><a href="#">Takeaway</a></li>
+            <li><a href="#">Catering</a></li>
+            <li><a href="#">Event Hosting</a></li>
+            <li><a href="#">Online Orders</a></li>
+          </ul>
+        </div>
+        <div class="footercontact">
+          <h3>Contact Us</h3>
+          <ul class="info">
+            <li>
+              <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
+              <span>123 Foodie Street,<br />Flavor Town, TX,<br />United States</span>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-phone"></i></span>
+              <p><a href="tel:+1234567890">+1 234 567 890</a></p>
+              <p><a href="tel:+1987654321">+1 987 654 321</a></p>
+            </li>
+            <li>
+              <span><i class="fa-regular fa-envelope"></i></span>
+              <p><a href="mailto:contact@delishdine.com">contact@delishdine.com</a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>Copyright &copy; 2025 DelishDine | All Rights Reserved</p>
+  </div>
+
+  <script>
+    // Responsive Navbar Toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navbar = document.getElementById('navbar');
+    navToggle.addEventListener('click', () => {
+      navbar.classList.toggle('responsive');
+    });
+
+    // Image Popup Modal
+    const popup = document.getElementById('popup');
+    const popupImg = document.getElementById('popup-img');
+    const closeBtn = document.getElementById('close-popup');
+
+    document.querySelectorAll('.popup-img').forEach(img => {
+      img.addEventListener('click', () => {
+        popup.style.display = 'flex';
+        popupImg.src = img.src;
+        popupImg.alt = img.alt || 'Popup Image';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+      popupImg.src = '';
+      popupImg.alt = '';
+    });
+
+    popup.addEventListener('click', e => {
+      if (e.target === popup) {
+        popup.style.display = 'none';
+        popupImg.src = '';
+        popupImg.alt = '';
+      }
+    });
+
+    // Prevent form submission for demo purposes
+    document.querySelector('.contactform form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for contacting us!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
